@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03CC2AE72915630F003B7AA8 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CC2AE62915630F003B7AA8 /* Session.swift */; };
+		03CC2AE929156536003B7AA8 /* Cinema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CC2AE829156536003B7AA8 /* Cinema.swift */; };
+		03CC2AFA291569C5003B7AA8 /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CC2AF8291569C5003B7AA8 /* SessionTableViewCell.swift */; };
+		03CC2AFB291569C5003B7AA8 /* SessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03CC2AF9291569C5003B7AA8 /* SessionTableViewCell.xib */; };
 		5859921B28084E800059475F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5859921A28084E800059475F /* AppDelegate.swift */; };
 		5859921D28084E800059475F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5859921C28084E800059475F /* SceneDelegate.swift */; };
-		5859921F28084E800059475F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5859921E28084E800059475F /* ViewController.swift */; };
+		5859921F28084E800059475F /* SessoesFilmeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5859921E28084E800059475F /* SessoesFilmeViewController.swift */; };
 		5859922228084E800059475F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5859922028084E800059475F /* Main.storyboard */; };
 		5859922428084E820059475F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5859922328084E820059475F /* Assets.xcassets */; };
 		5859922728084E820059475F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5859922528084E820059475F /* LaunchScreen.storyboard */; };
@@ -22,10 +26,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03CC2AE62915630F003B7AA8 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		03CC2AE829156536003B7AA8 /* Cinema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cinema.swift; sourceTree = "<group>"; };
+		03CC2AF8291569C5003B7AA8 /* SessionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
+		03CC2AF9291569C5003B7AA8 /* SessionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionTableViewCell.xib; sourceTree = "<group>"; };
 		5859921728084E800059475F /* LearningTask-6.3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LearningTask-6.3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5859921A28084E800059475F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5859921C28084E800059475F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5859921E28084E800059475F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5859921E28084E800059475F /* SessoesFilmeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessoesFilmeViewController.swift; sourceTree = "<group>"; };
 		5859922128084E800059475F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5859922328084E820059475F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5859922628084E820059475F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +57,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03CC2AE5291562FD003B7AA8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5859923028099C350059475F /* Movie.swift */,
+				03CC2AE62915630F003B7AA8 /* Session.swift */,
+				03CC2AE829156536003B7AA8 /* Cinema.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		03CC2AEA29156662003B7AA8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5859922028084E800059475F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		03CC2AEC2915669E003B7AA8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5859921E28084E800059475F /* SessoesFilmeViewController.swift */,
+				03CC2AED29156705003B7AA8 /* Movie */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		03CC2AED29156705003B7AA8 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				03CC2AEE2915670D003B7AA8 /* View */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		03CC2AEE2915670D003B7AA8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5859922E280876310059475F /* TableHeaderView.swift */,
+				585992352809AC220059475F /* TableSectionHeaderView.swift */,
+				03CC2AF129156897003B7AA8 /* Session Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		03CC2AF129156897003B7AA8 /* Session Cell */ = {
+			isa = PBXGroup;
+			children = (
+				03CC2AF8291569C5003B7AA8 /* SessionTableViewCell.swift */,
+				03CC2AF9291569C5003B7AA8 /* SessionTableViewCell.xib */,
+			);
+			path = "Session Cell";
+			sourceTree = "<group>";
+		};
 		5859920E28084E800059475F = {
 			isa = PBXGroup;
 			children = (
@@ -72,11 +134,9 @@
 				5859922328084E820059475F /* Assets.xcassets */,
 				58599241280A2D090059475F /* Common */,
 				5859923C2809D0980059475F /* API */,
-				5859923028099C350059475F /* Movie.swift */,
-				5859922028084E800059475F /* Main.storyboard */,
-				5859921E28084E800059475F /* ViewController.swift */,
-				5859922E280876310059475F /* TableHeaderView.swift */,
-				585992352809AC220059475F /* TableSectionHeaderView.swift */,
+				03CC2AE5291562FD003B7AA8 /* Models */,
+				03CC2AEA29156662003B7AA8 /* View */,
+				03CC2AEC2915669E003B7AA8 /* Scenes */,
 			);
 			path = "LearningTask-6.3";
 			sourceTree = "<group>";
@@ -175,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03CC2AFB291569C5003B7AA8 /* SessionTableViewCell.xib in Resources */,
 				5859922728084E820059475F /* LaunchScreen.storyboard in Resources */,
 				5859922428084E820059475F /* Assets.xcassets in Resources */,
 				5859922228084E800059475F /* Main.storyboard in Resources */,
@@ -188,10 +249,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03CC2AFA291569C5003B7AA8 /* SessionTableViewCell.swift in Sources */,
+				03CC2AE72915630F003B7AA8 /* Session.swift in Sources */,
 				58599245280A2DF70059475F /* TimeInterval+DateComponentsFormatter.swift in Sources */,
 				5859922F280876310059475F /* TableHeaderView.swift in Sources */,
-				5859921F28084E800059475F /* ViewController.swift in Sources */,
+				5859921F28084E800059475F /* SessoesFilmeViewController.swift in Sources */,
 				585992362809AC220059475F /* TableSectionHeaderView.swift in Sources */,
+				03CC2AE929156536003B7AA8 /* Cinema.swift in Sources */,
 				5859921B28084E800059475F /* AppDelegate.swift in Sources */,
 				5859923E2809D0A90059475F /* MovieSessionsAPI.swift in Sources */,
 				58599243280A2D8E0059475F /* CustomPatterns+DateFormatter.swift in Sources */,

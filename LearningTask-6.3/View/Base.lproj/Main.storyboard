@@ -1,36 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sessoes Filme View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LearningTask_6_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SessoesFilmeViewController" customModule="LearningTask_6_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DxP-LD-9gS" userLabel="Container Stack View">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="848"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bc9-Mu-LF5" userLabel="Header Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="720"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="mYx-OH-qit" userLabel="Logo Image View">
-                                                <rect key="frame" x="16" y="12.5" width="42" height="42"/>
+                                                <rect key="frame" x="16" y="339" width="42" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="IY2-xX-HbW"/>
                                                     <constraint firstAttribute="width" constant="42" id="n7c-uZ-NUf"/>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0GI-bx-Yak" userLabel="Location Stack View">
-                                                <rect key="frame" x="157.5" y="17.5" width="104" height="32"/>
+                                                <rect key="frame" x="157.5" y="344" width="104" height="32"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LocationPin" translatesAutoresizingMaskIntoConstraints="NO" id="kcf-iw-Lth" userLabel="Location Icon Image View">
                                                         <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
@@ -49,7 +50,7 @@
                                                 </subviews>
                                             </stackView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Account" translatesAutoresizingMaskIntoConstraints="NO" id="4BR-t4-XLJ" userLabel="Account Image View">
-                                                <rect key="frame" x="366" y="21.5" width="32" height="24"/>
+                                                <rect key="frame" x="366" y="348" width="32" height="24"/>
                                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="32" id="Ve8-X4-33C"/>
@@ -60,10 +61,10 @@
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <directionalEdgeInsets key="directionalLayoutMargins" top="12" leading="16" bottom="12" trailing="16"/>
                                     </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rds-1p-1nh" userLabel="Remova esta view">
-                                        <rect key="frame" x="0.0" y="67" width="414" height="785"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qFc-ph-xhN">
+                                        <rect key="frame" x="0.0" y="720" width="414" height="128"/>
                                         <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
-                                    </view>
+                                    </tableView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -76,6 +77,9 @@
                             <constraint firstItem="DxP-LD-9gS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rV5-OB-8VN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="qFc-ph-xhN" id="TKc-gi-HIT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

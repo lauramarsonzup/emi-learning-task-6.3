@@ -19,10 +19,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window!.overrideUserInterfaceStyle = .dark
         
-//        let selectedMovie = Movie(backgroundImage: "Background", posterImage: "Poster",
-//                                  title: "Doutor Estranho no Multiverso da Loucura",
-//                                  rating: .notRecommendedUnder14, durationInMinutes: 126,
-//                                  criticsScore: 93, publicScore: 98)
+        let selectedMovie = Movie(backgroundImage: "Background", posterImage: "Poster",
+                                  title: "Doutor Estranho no Multiverso da Loucura",
+                                  rating: .notRecommendedUnder14, durationInMinutes: 126,
+                                  criticsScore: 93, publicScore: 98)
+        
+        let viewController = window!.rootViewController as! SessoesFilmeViewController
+        viewController.movie = selectedMovie
+        viewController.movieSessionsAPI = MovieSessionsAPI()
         
     }
 

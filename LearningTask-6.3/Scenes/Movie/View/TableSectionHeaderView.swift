@@ -1,7 +1,13 @@
 
 import UIKit
 
-class TableSectionHeaderView { // : ?
+class TableSectionHeaderView: UITableViewHeaderFooterView {
+    
+    static var reuseId: String {
+        return String(describing: self)
+    }
+    
+    static var heightConstant: CGFloat = 48
     
     // MARK: - subviews
     private lazy var iconImageView: UIImageView = {
@@ -27,6 +33,12 @@ class TableSectionHeaderView { // : ?
         return label
     }()
     
+    var titulo: String? {
+        didSet {
+            label.text = titulo
+        }
+    }
+    
     private lazy var containerStackView: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [
             iconImageView, label
@@ -40,7 +52,35 @@ class TableSectionHeaderView { // : ?
         stack.layoutMargins = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
         return stack
     }()
-    
-    // ?
 
+    override init(reuseIdentifier: String?) {
+        super.init(reuseIdentifier: reuseIdentifier)
+        setup()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setup() {
+        addViews()
+        addConstraints()
+    }
+    
+    private func addViews() {
+        addSubview(containerStackView)
+    }
+    
+    private func addConstraints() {
+        NSLayoutConstraint.activate([
+            heightAnchor.constraint(equalToConstant: Self.heightConstant)
+        ])
+        
+        NSLayoutConstraint.activate([
+            containerStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            containerStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            containerStackView.topAnchor.constraint(equalTo: self.topAnchor),
+            containerStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ])
+    }
 }
